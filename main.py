@@ -12,12 +12,16 @@ import os
 #nltk.download('stopwords')
 #nltk.download('punkt')    
 
-corpus = [
+n = int(input("Enter number of documents :"))
+corpus = []
+for i in range(n):
+    corpus.append(input("Enter doc no "+str(i+1)+" :"))
+"""corpus = [
     'this is the FIRST!! document',
     'this document is.,,,.! the second document',
     'and this is the third one',
     'is this the last document',
-]
+]"""
 doc_count = len(corpus)     #Total number of documents
 
 def convert_lower_case(data):
@@ -130,7 +134,8 @@ for doc in corpus:
 inverted_index = get_inverted_index(forward_index)
 
 #SEARCH INPUT
-search = "first document"#input()
+print()
+search = input("ENTER SEARCH QUERRY :")
 search = preprocessing(search)
 search = search.split()
 
