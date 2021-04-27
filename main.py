@@ -145,7 +145,7 @@ for d in TF.keys():
 	Cosine_Score[d]=TF[d]/math.sqrt(magn[d])
 print("DOCUMENT NUMBER", "| COSINE SCORE")
 for docno in range(doc_count):
-    print(docno,"\t|\t", Cosine_Score.get(docno+1,0))
+    print(docno+1,"\t|\t", Cosine_Score.get(docno+1,0))
     
 Cosine_Score = sorted(Cosine_Score.items(), key=lambda item: item[1], reverse=True)
 print()
